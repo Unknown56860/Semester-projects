@@ -1,6 +1,9 @@
+# This py file manages and saves the song path and other data
+
 import os
 import pandas
 
+# You can change this basepath to the place you want to save song data
 basepath = '/'.join(os.path.abspath(__file__).split('\\')[:(len(os.path.abspath(__file__).split('\\'))-1)]) + '/'
 
 class FrameLayout:      # Convert to or fetch from dataframe
