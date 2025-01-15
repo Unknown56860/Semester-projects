@@ -33,7 +33,7 @@ class MusicPlayer:
 # Music player window
         self.window = window
         self.window.geometry("800x500")
-        self.window.title("Personalised Music Player")
+        self.window.title("Python Music Player")
 
 # Current playing song container
         self.player_frame = tkinter.Frame(self.window, bg="red")
