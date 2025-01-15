@@ -1,3 +1,8 @@
+# Hey there, this is a python music player
+
+# Pardon me for unnecessary use of print statements and messy code,
+# I somehow just made it to work lol
+
 import tkinter
 import tkinter.filedialog
 import tkinter.messagebox
