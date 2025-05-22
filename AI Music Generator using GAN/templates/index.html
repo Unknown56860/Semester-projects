@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Generator using GAN</title>
+    <link rel="stylesheet" href="static/style.css"/>
+</head>
+<body>
+    <!-- Music Display Section -->
+    <div class="generated-music-display">
+        <h1>AI Music Generator</h1>
+
+        <div class="visualizer-wrapper">
+            <midi-visualizer
+                id="myVisualizer"
+                type="piano-roll"
+                src="/static/music/bound1.mid">
+            </midi-visualizer>
+            <midi-player
+                id="midiPlayer"
+                src="/static/music/bound1.mid"
+                sound-font
+                visualizer="#myVisualizer">
+            </midi-player>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Model Selection Pane -->
+        <div class="pane">
+            <h3>Available Models:</h3>
+            <ul id="modelList" class="scroll-list">
+                <li data-model="midi_lstm_gan_custom_25000epochs">Model 1</li>
+                <li data-model="midi_lstm_gan_custom_50000epochs">Model 2</li>
+                <li data-model="midi_lstm_gan_custom_100000epochs">Model 3</li>
+            </ul>
+            <button class="button" id="generateBtn">Generate Music</button>
+        </div>
+
+        <!-- Generated Music Pane -->
+        <div class="pane">
+            <h3>Generated Music:</h3>
+            <ul id="generatedMusicList" class="scroll-list">
+            </ul>
+            <button class="button" id="playBtn">Select Music</button>
+        </div>
+    </div>
+
+    <script src="/static/midi_playerjs.js"></script>
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
